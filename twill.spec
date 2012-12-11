@@ -1,11 +1,10 @@
 Name:		twill
 Summary:	Simple command line language for web browsing
 Version:	0.9
-Release:	%{mkrel 4}
+Release:	5
 Source0:	http://darcs.idyll.org/~t/projects/%{name}-%{version}.tar.gz
 URL:		http://twill.idyll.org
 Group:		Networking/WWW
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	MIT
 BuildArch:	noarch
 BuildRequires:	python
@@ -25,17 +24,33 @@ that use forms, cookies, and most standard Web features.
 %__python setup.py build
 
 %install
-%__rm -rf %{buildroot}
 %__python setup.py install --root=%{buildroot}
-
-%clean
-%__rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc README.html README.txt doc/*.*
 %{_bindir}/twill-fork
 %{_bindir}/twill-sh
-%{py_puresitedir}/%{name}-%{version}-py%{pyver}.egg-info
+%{py_puresitedir}/%{name}-%{version}-py%{py_ver}.egg-info
 %{py_puresitedir}/%{name}
+
+
+
+%changelog
+* Tue Nov 02 2010 Michael Scherer <misc@mandriva.org> 0.9-4mdv2011.0
++ Revision: 592160
+- rebuild for python 2.7
+
+* Sun Sep 20 2009 Thierry Vignaud <tv@mandriva.org> 0.9-3mdv2010.0
++ Revision: 445569
+- rebuild
+
+* Sat Dec 27 2008 Adam Williamson <awilliamson@mandriva.org> 0.9-2mdv2009.1
++ Revision: 319728
+- rebuild with python 2.6
+
+* Thu Apr 17 2008 Adam Williamson <awilliamson@mandriva.org> 0.9-1mdv2009.0
++ Revision: 195041
+- import twill
+
 
