@@ -1,7 +1,7 @@
 Name:		twill
 Summary:	Simple command line language for web browsing
 Version:	0.9
-Release:	5
+Release:	6
 Source0:	http://darcs.idyll.org/~t/projects/%{name}-%{version}.tar.gz
 URL:		http://twill.idyll.org
 Group:		Networking/WWW
