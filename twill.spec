@@ -3,7 +3,7 @@ Summary:	Simple command line language for web browsing
 Version:	0.9
 Release:	6
 Source0:	http://darcs.idyll.org/~t/projects/%{name}-%{version}.tar.gz
-URL:		http://twill.idyll.org
+URL:		https://twill.idyll.org
 Group:		Networking/WWW
 License:	MIT
 BuildArch:	noarch
